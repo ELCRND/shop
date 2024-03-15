@@ -1,9 +1,12 @@
+import Categories from "@/components/modules/Carousels/Categories/Categories";
+import Products from "@/components/modules/Products/Products";
+
 export default function Home() {
   return (
-    <main className="flex font-[Poppins] min-h-screen flex-col items-center justify-between p-24">
+    <main className="font-[Poppins]">
       <div className="container">
-        <h1>page1</h1>
-        <button>123</button>
+        <Categories/>
+        <Products/>
       </div>
     </main>
   );

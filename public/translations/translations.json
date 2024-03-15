@@ -1,8 +1,68 @@
 {
     "en":{
-        "help-btn": "Help"
+        "header":{
+            "help-btn": "Help",
+            "account":"Account",
+            "shopping":"Shopping",
+
+            "jewelry&accessories":"Jewelry & Accessories",
+            "clothing&shoes":"Clothing & Shoes",
+            "home&living":"Home & Living",
+            "wedding&party":"Wedding & Party",
+            "toys&entertainment":"Toys & Entertainment",
+            "art&collectibles":"Art & Collectibles",
+            "craftSupplies&tools":"Craft Supplies & Tools",
+
+            "search":"Search anything",
+
+            "all":"All categories",
+            "accessories":"Accessories",
+            "jewelry":"Jewelry",
+            "clothing":"Clothing",
+            "shoes":"Shoes",
+            "home":"Home",
+            "living":"Living",
+            "wedding":"Wedding",
+            "toys":"Toys",
+            "entertainment":"Entertainment",
+            "art":"Art",
+            "collectibles":"Collectibles",
+            "craftSupplies":"Craft Supplies",
+            "tools":"Tools"
+        }
     },
+
     "ru":{
-        "help-btn": "Помощь"
+        "header":{
+            "help-btn":"Помощь",
+            "account":"Аккаунт",
+            "shopping":"Покупки",
+
+            "jewelry&accessories":"Ювелирные изделия & аксессуары",
+            "clothing&shoes":"Одежда & обувь",
+            "home&living":"для Дома & жизни",
+            "wedding&party":"Свадеба & вечеринка",
+            "toys&entertainment":"Игрушки & развлечения",
+            "art&collectibles":"Искусство & коллекционирование",
+            "craftSupplies&tools":"Ремесло & инструменты",
+
+            "search":"Поиск",
+
+            "all":"Все категории",
+            "accessories":"Аксессуары",
+            "jewelry":"Ювелирные изделия",
+            "clothing":"Одежда",
+            "shoes":"Обувь",
+            "home":"для Дома",
+            "living":"для Жизни",
+            "wedding":"Свадьба",
+            "toys":"Игрушки",
+            "entertainment":"Развлечение",
+            "art":"Искусство",
+            "collectibles":"Коллекционирование",
+            "craftSupplies":"Ремесло",
+            "tools":"Инструменты"
+        }
     }
 }
+

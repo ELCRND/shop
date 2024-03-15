@@ -6,4 +6,4 @@ const lang = createDomain();
 
 export const setLang = lang.createEvent<Langs>();
 
-export const $langs = lang.createStore(Langs.EN).on(setLang, (_, lang) => lang);
+export const $langs = lang.createStore(Langs.RU).on(setLang, (_, lang) => lang);
