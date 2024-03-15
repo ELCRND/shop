@@ -1,12 +1,15 @@
+'use client'
 import Product from "@/components/elements/Product/Product"
+import { useLang } from "@/hooks/useLang"
 
 const Products = () => {
+    const {lang,translations}=useLang()
   return (
     <div className="grid grid-cols-4 gap-6">
         <Product 
             imagePath="/img/products/chair.png" 
             desc="chair" 
-            name="Vonna Neva Walnut Sandalye Chair"
+            name={translations[lang].products.chair.name}
             price={195.13}
             colorsNames={[
                 'Sushi',
@@ -22,7 +25,7 @@ const Products = () => {
         <Product 
             imagePath="/img/products/lamp.png" 
             desc="lamp" 
-            name="Wood lamp, Floor Lamp, Lambader, Decorative"
+            name={translations[lang].products.lamp.name}
             price={458.43}
             colorsNames={[
                 'Sushi',
@@ -36,7 +39,7 @@ const Products = () => {
         <Product 
             imagePath="/img/products/sofa.png" 
             desc="sofa" 
-            name="NOCKEBY 3-Seat Sofa Cover Slipcover Hand Made With Multiple"
+            name={translations[lang].products.sofa.name}
             price={789.67}
             colorsNames={[
                 'Blue',
@@ -48,7 +51,7 @@ const Products = () => {
         <Product 
             imagePath="/img/products/covers.png" 
             desc="covers" 
-            name="Lace Punch Needle Pillow Covers with invisible zipper, 16*16 inches"
+            name={translations[lang].products.covers.name}
             price={43.23}
             colorsNames={[
                 'Sushi',

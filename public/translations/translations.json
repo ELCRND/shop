@@ -29,6 +29,35 @@
             "collectibles":"Collectibles",
             "craftSupplies":"Craft Supplies",
             "tools":"Tools"
+        },
+        "products":{
+            "colors":"colors",
+            "chair":{
+                "name":"Vonna Neva Walnut Sandalye Chair"
+            },
+            "lamp":{
+                "name":"Wood lamp, Floor Lamp, Lambader, Decorative"
+            },
+            "sofa":{
+                "name":"NOCKEBY 3-Seat Sofa Cover Slipcover Hand Made With Multiple"
+            },
+            "covers":{
+                "name":"Lace Punch Needle Pillow Covers with invisible zipper, 16*16 inches"
+            }
+        },
+        "banners":{
+            "community":{
+                "title":"A community doing good",
+                "desc":"Commerce is a global online marketplace, where people."
+            },
+            "support":{
+                "title":"Support independent creators",
+                "desc":"Just millions of people selling the things they love."
+            },
+            "peace":{
+                "title":"Peace of mind",
+                "desc":"Privacy is the highest priority of our dedicated team."
+            }
         }
     },
 
@@ -62,6 +91,38 @@
             "collectibles":"Коллекционирование",
             "craftSupplies":"Ремесло",
             "tools":"Инструменты"
+        },
+        "products":{
+            "colors":"Цвета",
+            "chair":{
+                "name":"Стул Vonna Neva Орех Sandalye"
+            },
+            "lamp":{
+                "name":"Деревянная лампа, Торшер, Lambader, Декоративная"
+            },
+            "sofa":{
+                "name":"Чехол на трехместный диван NOCKEBY, чехол ручной работы из нескольких материалов"
+            },
+            "covers":{
+                "name":"Чехлы на подушки с кружевной иглой и потайной молнией, 16*16 дюймов"
+            }
+        },
+        "banners":{
+            "community":{
+                "title":"Сообщество, делающее добро",
+                "desc":"Коммерция — это глобальный онлайн-рынок, где люди."
+            },
+            "support":{
+                "title":"Поддержите независимых авторов",
+                "desc":"Просто миллионы людей продают то, что им нравится."
+            },
+            "peace":{
+                "title":"Спокойствие духа",
+                "desc":"Конфиденциальность является высшим приоритетом нашей преданной команды."
+            }
+
+
+
         }
     }
 }

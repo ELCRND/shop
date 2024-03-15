@@ -50,10 +50,13 @@ const config: Config = {
       colors: {
         "main-primary": "#eb6d20",
         "main-white": "#fff",
-        subtext: "#9a9a9a",
+        "main--middle-black": "#0b0b0b",
         "main-medium": "#5f5f5f",
-        "text--text": "#3e3e3e",
+        subtext: "#9a9a9a",
         "system-error": "#dd5e5e",
+        "text--text": "#3e3e3e",
+        "text--paragraph": "#292929",
+        "base--gray-background": "#f5f6f8",
 
         //products cards colors
         'Sushi':'#7CB93E',

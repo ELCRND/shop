@@ -9,11 +9,10 @@ interface IProduct {
 
 const Product = ({imagePath, desc, name, price, colorsNames, bgColor}:IProduct) => {
   return (
-    <div className={`p-6 flex flex-col justify-between rounded-md relative text-text--text bg-${bgColor}`}>
-        <img className='self-center' src={imagePath} alt={desc} />
+    <div className={`p-6 grid grid-rows-[200px_32px_32px_auto_auto] items-center rounded-md relative text-text--text bg-${bgColor}`}>
+        <img className='justify-self-center' src={imagePath} alt={desc} />
         <span className="text-xs font-medium">Colors</span>
-
-        <ul className="mt-3 mb-6 flex gap-2">
+        <ul className="flex gap-2">
             {colorsNames.map((cName)=> 
             <li key={cName}>
                 <label className={`w-4 h-4 block rounded-full bg-${cName} cursor-pointer has-[:checked]:outline outline-1`}>
