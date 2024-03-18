@@ -1,60 +1,57 @@
 "use client";
+import HeaderNav from "@/components/elements/HeaderNav/HeaderNav";
 import HumbBtn from "@/components/elements/HumbBtn/HumbBtn";
 import Logo from "@/components/elements/Logo/Logo";
+import Modal from "@/components/elements/Modal/Modal";
+import ModalNav from "@/components/elements/ModalNav/ModalNav";
 import Search from "@/components/elements/Search/Search";
 
 import { useLang } from "@/hooks/useLang";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 
 const Header = () => {
   const { lang, translations } = useLang();
+  const [isModalActive, setModalActive] = useState(false);
+  const handleModalOpen = () => {
+    setModalActive(true);
+    document.body.style.overflow='hidden'
+  };
+  const handleModalClose = () => {
+    setModalActive(false);
+    document.body.style.overflow='visible'
+  };
   return (
-    <header>
+    <header id="header" className="bg-[#FFF9F3]">
       <div className="container">
-        <div className="mt-6 grid items-center">
+        <div className="pt-6 grid items-center">
           <Logo />
           <Search />
-          <HumbBtn />
-          <button className="col-start-3 justify-self-end py-4 px-[30px] rounded-[50px] bg-main-primary text-[12px] leading-4 font-medium">
+          <HumbBtn isModalActive={isModalActive} openModal={handleModalOpen} />
+
+          {isModalActive && (
+          <Modal onClose={handleModalClose}>
+            <ModalNav/>
+          </Modal>
+          )}
+
+          <button className="col-start-3 justify-self-end py-4 px-[30px] hidden tablet:block rounded-[50px] bg-main-primary text-[12px] leading-4 font-medium">
             {translations[lang].header["help-btn"]}
           </button>
           <Link
             href="/"
-            className="col-start-4 justify-self-end md:mr-6 md:ml-4 flex before:mr-2 before:content-[url('/img/header/user_icon.svg')] _hover _active"
+            className="row-start-1 col-start-2 tablet:col-start-4 justify-self-end tablet:mr-6 tablet:ml-4 desktop:m-0 flex text-text--text before:mr-2 before:content-[url('/img/header/user_icon.svg')] _hover _active"
           >
-            <span>{translations[lang].header["account"]}</span>
+            <span className="hidden tablet:inline">{translations[lang].header["account"]}</span>
           </Link>
           <Link
             href="/"
-            className="col-start-5 justify-self-end flex before:mr-2 before:content-[url('/img/header/shopping_icon.svg')] _hover _active"
+            className="row-start-1 col-start-3 tablet:col-start-5 justify-self-end flex text-text--text before:mr-2 before:content-[url('/img/header/shopping_icon.svg')] _hover _active"
           >
-            <span>{translations[lang].header["shopping"]}</span>
+            <span className="hidden tablet:inline">{translations[lang].header["shopping"]}</span>
           </Link>
         </div>
-        <ul className="mt-6 desktop:flex justify-between text-[14px] leading-6 text-center hidden">
-          <li>
-            <Link className="_hover _active" href="jewelry&cccessories">{translations[lang].header["jewelry&accessories"]}</Link>
-          </li>
-          <li>
-            <Link className="_hover _active" href="clothing&shoes">{translations[lang].header["clothing&shoes"]}</Link>
-          </li>
-          <li>
-            <Link className="_hover _active" href="home&living">{translations[lang].header["home&living"]}</Link>
-          </li>
-          <li>
-            <Link className="_hover _active" href="wedding&party">{translations[lang].header["wedding&party"]}</Link>
-          </li>
-          <li>
-            <Link className="_hover _active" href="toys&entertainment">{translations[lang].header["toys&entertainment"]}</Link>
-          </li>
-          <li>
-            <Link className="_hover _active" href="art&collectibles">{translations[lang].header["art&collectibles"]}</Link>
-          </li>
-          <li>
-            <Link className="_hover _active" href="craft&tools">{translations[lang].header["craftSupplies&tools"]}</Link>
-          </li>
-        </ul>
+        <HeaderNav/>
       </div>
     </header>
   );

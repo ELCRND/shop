@@ -21,12 +21,30 @@ declare global {
 }
 
 register();
+
 const SubCategories = () => {
   const swiperRef = useRef(null) as any;
   useEffect(() => {
     const swiperContainer = swiperRef.current;
     const params = {
+      slidesPerView: 8,
       navigation: true,
+      loop:true,
+      spaceBetween: 24,
+      breakpoints:{
+        200:{
+          slidesPerView: 2
+        },
+        580: {
+          slidesPerView: 4
+        },
+        900: {
+          slidesPerView: 5.3
+        },
+        1320: {
+          slidesPerView: 8
+        }
+      },
       injectStyles: [
         `
               .swiper-button-next,
@@ -61,14 +79,7 @@ const SubCategories = () => {
   }, []);
   return (
     <>
-      <swiper-container
-        ref={swiperRef}
-        init={false}
-        slides-per-view="8"
-        loop
-        navigation
-        space-between={24}
-      >
+      <swiper-container ref={swiperRef} init={false} >
         <swiper-slide>
           <SubCategory
             imagePath="/img/subcategoriesCarousel/craft_kits.png"

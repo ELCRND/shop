@@ -7,8 +7,8 @@ export default function Home() {
   return (
     <main className="font-[Poppins]">
       <div className="container">
-        <Categories/>
-        <Products/>
+        {/* <Categories/> */}
+        {/* <Products/> */}
         <Banners/>
         <SubCategories/>
       </div>
