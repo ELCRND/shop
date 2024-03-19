@@ -1,49 +1,35 @@
 "use client";
 import { useEffect, useRef } from "react";
-import { SwiperProps, SwiperSlideProps } from "swiper/react";
 import { register } from "swiper/element/bundle";
 import SubCategory from "@/components/elements/SubCategory/SubCategory";
+import { useLang } from "@/hooks/useLang";
 
-
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      "swiper-container": React.DetailedHTMLProps<
-        React.HTMLAttributes<HTMLElement> & SwiperProps,
-        HTMLElement
-      >;
-      "swiper-slide": React.DetailedHTMLProps<
-        React.HTMLAttributes<HTMLElement> & SwiperSlideProps,
-        HTMLElement
-      >;
-    }
-  }
-}
 
 register();
 
 const SubCategories = () => {
   const swiperRef = useRef(null) as any;
+  const { lang, translations } = useLang();
   useEffect(() => {
     const swiperContainer = swiperRef.current;
     const params = {
       slidesPerView: 8,
       navigation: true,
-      loop:true,
+      loop: true,
       spaceBetween: 24,
-      breakpoints:{
-        200:{
-          slidesPerView: 2
+      breakpoints: {
+        200: {
+          slidesPerView: 2,
         },
         580: {
-          slidesPerView: 4
+          slidesPerView: 4,
         },
         900: {
-          slidesPerView: 5.3
+          slidesPerView: 5.3,
         },
         1320: {
-          slidesPerView: 8
-        }
+          slidesPerView: 8,
+        },
       },
       injectStyles: [
         `
@@ -78,64 +64,66 @@ const SubCategories = () => {
     swiperContainer.initialize();
   }, []);
   return (
-    <>
-      <swiper-container ref={swiperRef} init={false} >
+    <div className="mt-10">
+      <h2 className="text-lg font-medium text-text--text">Find things you'll love. Support independent sellers.</h2>
+      <span className="text-sm font-medium text-subtext">Only on polka.</span>
+      <swiper-container ref={swiperRef} init={false}>
         <swiper-slide>
           <SubCategory
             imagePath="/img/subcategoriesCarousel/craft_kits.png"
-            desc="Craft Kits"
+            desc={translations[lang].subCategories["Craft-Kits"]}
           />
         </swiper-slide>
         <swiper-slide>
           <SubCategory
             imagePath="/img/subcategoriesCarousel/throw_pillows.png"
-            desc="Throw Pillows"
+            desc={translations[lang].subCategories["Throw-Pillows"]}
           />
         </swiper-slide>
         <swiper-slide>
           <SubCategory
             imagePath="/img/subcategoriesCarousel/natural_glass.png"
-            desc="Natural Glass"
+            desc={translations[lang].subCategories["Natural-Glass"]}
           />
         </swiper-slide>
         <swiper-slide>
           <SubCategory
             imagePath="/img/subcategoriesCarousel/self_care.png"
-            desc="Self Care"
+            desc={translations[lang].subCategories["Self-Care"]}
           />
         </swiper-slide>
         <swiper-slide>
           <SubCategory
             imagePath="/img/subcategoriesCarousel/gift_ideas.png"
-            desc="Gift Ideas"
+            desc={translations[lang].subCategories["Gift-Ideas"]}
           />
         </swiper-slide>
         <swiper-slide>
           <SubCategory
             imagePath="/img/subcategoriesCarousel/wall_decor.png"
-            desc="Wall Decor"
+            desc={translations[lang].subCategories["Wall-Decor"]}
           />
         </swiper-slide>
         <swiper-slide>
           <SubCategory
             imagePath="/img/subcategoriesCarousel/wedding.png"
-            desc="Wedding"
+            desc={translations[lang].subCategories["Wedding"]}
           />
         </swiper-slide>
         <swiper-slide>
           <SubCategory
             imagePath="/img/subcategoriesCarousel/life_style.png"
-            desc="Life Style"
+            desc={translations[lang].subCategories["Life-Style"]}
           />
         </swiper-slide>
         <swiper-slide>
           <SubCategory
             imagePath="/img/subcategoriesCarousel/life_style.png"
-            desc="Life Style"
+            desc={translations[lang].subCategories["Life-Style"]}
           />
         </swiper-slide>
       </swiper-container>
-    </>
+    </div>
   );
 };
 

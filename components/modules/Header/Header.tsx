@@ -5,6 +5,7 @@ import Logo from "@/components/elements/Logo/Logo";
 import Modal from "@/components/elements/Modal/Modal";
 import ModalNav from "@/components/elements/ModalNav/ModalNav";
 import Search from "@/components/elements/Search/Search";
+import SwapLangAndTheme from "@/components/elements/SwapLangAndTheme/SwapLangAndTheme";
 
 import { useLang } from "@/hooks/useLang";
 import Link from "next/link";
@@ -15,11 +16,11 @@ const Header = () => {
   const [isModalActive, setModalActive] = useState(false);
   const handleModalOpen = () => {
     setModalActive(true);
-    document.body.style.overflow='hidden'
+    document.body.classList.add('_overflow-hidden')
   };
   const handleModalClose = () => {
     setModalActive(false);
-    document.body.style.overflow='visible'
+    document.body.classList.remove('_overflow-hidden')
   };
   return (
     <header id="header" className="bg-[#FFF9F3]">
@@ -31,6 +32,7 @@ const Header = () => {
 
           {isModalActive && (
           <Modal onClose={handleModalClose}>
+            <SwapLangAndTheme/>
             <ModalNav/>
           </Modal>
           )}

@@ -30,6 +30,29 @@
             "craftSupplies":"Craft Supplies",
             "tools":"Tools"
         },
+        "footer":{
+            "Gift-cards": "Gift cards",
+            "Site-map": "Site map",
+            "Polka-blog": "Polka blog",
+            "Login": "Login",
+            "Sign-in": "Sign in",
+            "Sell-on-Polka": "Sell on Polka",
+            "Teams": "Teams",
+            "Forums": "Forums",
+            "Affiliates": "Affiliates",
+            "Polka-Inc": "Polka, Inc.",
+            "Policies": "Policies",
+            "Investors": "Investors",
+            "Careers": "Careers",
+            "Press": "Press",
+            "Help-Center": "Help Center",
+            "Trust-and-safety": "Trust and safety",
+            "Privacy-settings": "Privacy settings",
+            "Privacy-policy": "Privacy policy",
+            "Terms-of-use":"Terms of use" ,
+            "Cookies": "Cookies",
+            "Scroll-to-top": "Scroll to top"
+        },
         "products":{
             "colors":"colors",
             "chair":{
@@ -58,6 +81,16 @@
                 "title":"Peace of mind",
                 "desc":"Privacy is the highest priority of our dedicated team."
             }
+        },
+        "subCategories":{
+            "Craft-Kits": "Craft Kits",
+            "Throw-Pillows": "Throw Pillows",
+            "Natural-Glass": "Natural Glass",
+            "Self-Care": "Self Care",
+            "Gift-Ideas": "Gift Ideas",
+            "Wall-Decor": "Wall Decor",
+            "Wedding": "Wedding",
+            "Life-Style":"Life Style"
         }
     },
 
@@ -92,6 +125,29 @@
             "craftSupplies":"Ремесло",
             "tools":"Инструменты"
         },
+        "footer":{
+            "Gift-cards": "Подарочные карты",   
+            "Site-map": "Карта сайта",
+            "Polka-blog": "Полька-блог",
+            "Login": "Авторизоваться",
+            "Sign-in": "Войти",
+            "Sell-on-Polka": "Продать на Польке",
+            "Teams": "Команды",
+            "Forums": "Форумы",
+            "Affiliates": "Филиалы",
+            "Polka-Inc": "Полька, ООО",
+            "Policies": "Политика",
+            "Investors": "Инвесторы",
+            "Careers": "Карьера",
+            "Press": "Пресса",
+            "Help-Center": "Центр помощи",
+            "Trust-and-safety": "Доверие и безопасность",
+            "Privacy-settings": "Настройки конфиденциальности",
+            "Privacy-policy": "Политика конфиденциальности",
+            "Terms-of-use":"Условия эксплуатации" ,
+            "Cookies": "Куки",
+            "Scroll-to-top": "Пролистать наверх"
+        },
         "products":{
             "colors":"Цвета",
             "chair":{
@@ -123,6 +179,16 @@
 
 
 
+        },
+        "subCategories":{
+            "Craft-Kits": "Наборы для рукоделия",
+            "Throw-Pillows": "Декоративные подушки",
+            "Natural-Glass": "Натуральное стекло",
+            "Self-Care": "Самостоятельное лечение",
+            "Gift-Ideas": "Идеи для подарка",
+            "Wall-Decor": "Настенный декор",
+            "Wedding": "Свадьба",
+            "Life-Style":"Образ жизни"
         }
     }
 }

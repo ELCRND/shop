@@ -6,7 +6,7 @@ const HeaderNav = () => {
   return (
     <ul className={`mt-6 desktop:flex justify-between text-[14px] leading-6 text-center text-text--text hidden`}>
       <li>
-        <Link className="_hover _active" href="jewelry&cccessories">
+        <Link className="_hover _active" href="jewelry&accessories">
           {translations[lang].header["jewelry&accessories"]}
         </Link>
       </li>

@@ -9,7 +9,7 @@ interface IProduct {
 
 const Product = ({imagePath, desc, name, price, colorsNames, bgColor}:IProduct) => {
   return (
-    <div className={`p-6 grid grid-rows-[200px_32px_32px_auto_auto] items-center rounded-md relative text-text--text bg-${bgColor}`}>
+    <div className={`h-[374px] desktop:h-[418px] p-6 grid grid-rows-[200px_32px_32px_auto_auto] items-center rounded-md relative text-text--text bg-${bgColor}`}>
         <img className='justify-self-center' src={imagePath} alt={desc} />
         <span className="text-xs font-medium">Colors</span>
         <ul className="flex gap-2">

@@ -1,9 +1,12 @@
+'use client'
 import Logo from "@/components/elements/Logo/Logo";
+import { useLang } from "@/hooks/useLang";
 import Link from "next/link";
 
 const Footer = () => {
+  const {lang,translations} =useLang()
   return (
-    <footer className="text-text--paragraph">
+    <footer className="pt-10 text-text--paragraph">
       <div className="container grid tablet:grid-cols-[auto_auto]">
         <div className="row-end-3 tablet:row-end-2">
           <Logo />
@@ -37,127 +40,127 @@ const Footer = () => {
         <div className="grid">
           <div className="flex flex-col tablet:grid grid-cols-4">
             <div>
-              <label htmlFor="Shop" className="mb-6 px-6 py-4 rounded-[200px] bg-[#F5F6F8] block text-base font-medium tablet:p-0 tablet:bg-transparent">Shop</label>
               <input type="checkbox" id="Shop" className="peer/shop hidden"/>
-              <ul className="peer-checked/shop:flex mx-8 mb-4 flex-col gap-5 text-sm hidden tablet:m-0 tablet:flex">
+              <label htmlFor="Shop" className="_accordion tablet:p-0 tablet:bg-transparent tablet:after:content-none">Shop</label>
+              <ul className="_accordion-list peer-checked/shop:flex tablet:m-0 tablet:flex">
                 <li className="border-b tablet:border-b-0 _hover _active hover:underline">
                   <Link href="#">
-                    Gift cards
+                    {translations[lang].footer['Gift-cards']}                   
                   </Link>
                 </li>
                 <li className="border-b tablet:border-b-0 _hover _active hover:underline">
                   <Link href="#">
-                    Site map
+                    {translations[lang].footer['Site-map']}                 
                   </Link>
                 </li>
                 <li className="border-b tablet:border-b-0 _hover _active hover:underline">
                   <Link href="#">
-                    Polka blog
+                    {translations[lang].footer['Polka-blog']}                   
                   </Link>
                 </li>
                 <li className="border-b tablet:border-b-0 _hover _active hover:underline">
                   <Link href="#">
-                    Login
+                    {translations[lang].footer['Login']}                   
                   </Link>
                 </li>
                 <li className="border-b tablet:border-b-0 _hover _active hover:underline">
                   <Link href="#">
-                    Sign in
+                    {translations[lang].footer['Sign-in']}                    
                   </Link>
                 </li>
               </ul>
             </div>
             <div>
-              <label htmlFor="Sell" className="mb-6 px-6 py-4 rounded-[200px] bg-[#F5F6F8] block text-base font-medium tablet:p-0 tablet:bg-transparent">Sell</label>
               <input type="checkbox" id="Sell" className="peer/sell hidden"/>
-              <ul className="peer-checked/sell:flex mx-8 mb-4 flex-col gap-5 text-sm hidden tablet:m-0 tablet:flex">
+              <label htmlFor="Sell" className="_accordion tablet:p-0 tablet:bg-transparent tablet:after:content-none">Sell</label>
+              <ul className="_accordion-list peer-checked/sell:flex tablet:m-0 tablet:flex">
                 <li className="border-b tablet:border-b-0 _hover _active hover:underline">
                   <Link href="#">
-                    Sell on Polka
+                    {translations[lang].footer['Sell-on-Polka']}                    
                   </Link>
                 </li>
                 <li className="border-b tablet:border-b-0 _hover _active hover:underline">
                   <Link href="#">
-                    Teams
+                    {translations[lang].footer['Teams']}                   
                   </Link>
                 </li>
                 <li className="border-b tablet:border-b-0 _hover _active hover:underline">
                   <Link href="#">
-                    Forums
+                    {translations[lang].footer['Forums']}                   
                   </Link>
                 </li>
                 <li className="border-b tablet:border-b-0 _hover _active hover:underline">
                   <Link href="#">
-                    Affiliates
+                    {translations[lang].footer['Affiliates']}                   
                   </Link>
                 </li>
               </ul>
             </div>
             <div>
-              <label htmlFor="About" className="mb-6 px-6 py-4 rounded-[200px] bg-[#F5F6F8] block text-base font-medium tablet:p-0 tablet:bg-transparent">About</label>
               <input type="checkbox" id="About" className="peer/about hidden"/>
-              <ul className="peer-checked/about:flex mx-8 mb-4 flex-col gap-5 text-sm hidden tablet:m-0 tablet:flex">
+              <label htmlFor="About" className="_accordion tablet:p-0 tablet:bg-transparent tablet:after:content-none">About</label>
+              <ul className="_accordion-list peer-checked/about:flex tablet:m-0 tablet:flex">
                 <li className="border-b tablet:border-b-0 _hover _active hover:underline">
                   <Link href="#">
-                    Polka, Inc.
+                  {translations[lang].footer['Polka-Inc']}                   
                   </Link>
                 </li>
                 <li className="border-b tablet:border-b-0 _hover _active hover:underline">
                   <Link href="#">
-                    Policies
+                  {translations[lang].footer['Policies']}
                   </Link>
                 </li>
                 <li className="border-b tablet:border-b-0 _hover _active hover:underline">
                   <Link href="#">
-                    Investors
+                  {translations[lang].footer['Investors']}                 
                   </Link>
                 </li>
                 <li className="border-b tablet:border-b-0 _hover _active hover:underline">
                   <Link href="#">
-                    Careers
+                  {translations[lang].footer['Careers']}                 
                   </Link>
                 </li>
                 <li className="border-b tablet:border-b-0 _hover _active hover:underline">
                   <Link href="#">
-                    Press
+                  {translations[lang].footer['Press']}          
                   </Link>
                 </li>
               </ul>
             </div>
             <div>
-              <label htmlFor="Help" className="mb-6 px-6 py-4 rounded-[200px] bg-[#F5F6F8] block text-base font-medium tablet:p-0 tablet:bg-transparent">Help</label>
               <input type="checkbox" id="Help" className="peer/help hidden "/>
-              <ul className="peer-checked/help:flex mx-8 mb-4 flex-col gap-5 text-sm hidden tablet:m-0 tablet:flex">
+              <label htmlFor="Help" className="_accordion tablet:p-0 tablet:bg-transparent tablet:after:content-none">Help</label>
+              <ul className="_accordion-list peer-checked/help:flex tablet:m-0 tablet:flex">
                 <li className="border-b tablet:border-b-0 _hover _active hover:underline">
                   <Link href="#">
-                    Help Center
+                  {translations[lang].footer['Help-Center']}                  
                   </Link>
                 </li>
                 <li className="border-b tablet:border-b-0 _hover _active hover:underline">
                   <Link href="#">
-                    Trust and safety
+                  {translations[lang].footer['Trust-and-safety']}     
                   </Link>
                 </li>
                 <li className="border-b tablet:border-b-0 _hover _active hover:underline">
                   <Link href="#">
-                    Privacy settings
+                  {translations[lang].footer['Privacy-settings']}                 
                   </Link>
                 </li>
               </ul>
             </div>
           </div>
-          <div className="mt-[60px] desktop:mt-5 flex flex-col tablet:flex-row gap-12 relative">
+          <div className="mt-[60px] desktop:mt-8 flex flex-col tablet:flex-row gap-12 relative">
             <Link href="/" className="_hover _active">
-              Privacy policy
+            {translations[lang].footer['Privacy-policy']} 
             </Link>
             <Link href="/" className="_hover _active">
-              Terms of use
+            {translations[lang].footer['Terms-of-use']}
             </Link>
             <Link href="/" className="_hover _active">
-              Cookies
+            {translations[lang].footer['Cookies']}
             </Link>
             <Link href="#header" className="absolute right-0 _hover _active">
-              Scroll to top &#8673;
+              {translations[lang].footer['Scroll-to-top']} &#8673;
             </Link>
           </div>
         </div>

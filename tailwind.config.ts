@@ -49,6 +49,7 @@ const config: Config = {
       },
       colors: {
         "main-primary": "#eb6d20",
+        "main-third": "#eb8426",
         "main-white": "#fff",
         "main--middle-black": "#0b0b0b",
         "main-medium": "#5f5f5f",
@@ -56,6 +57,7 @@ const config: Config = {
         "system-error": "#dd5e5e",
         "text--text": "#3e3e3e",
         "text--paragraph": "#292929",
+        "text--subtext":" #9a9a9a",
         "base--gray-background": "#f5f6f8",
 
         //products cards colors
