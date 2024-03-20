@@ -1,6 +1,7 @@
 'use client'
 import Logo from "@/components/elements/Logo/Logo";
 import { useLang } from "@/hooks/useLang";
+import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => {
@@ -16,22 +17,22 @@ const Footer = () => {
           <ul className="w-fit mx-auto mb-[76px] flex grid-cols-2 gap-2 desktop:gap-4 py-3 px-[72px]  rounded-[200px] bg-base--gray-background tablet:mx-0 tablet:p-0 tablet:grid tablet:bg-transparent desktop:flex">
             <li className="w-8 h-8 rounded-full bg-[#1877F2] _content-center">
               <Link href="/">
-                <img src="/img/socials/facebook.svg" alt="facebook" />
+                <Image width={0} height={0} className="w-4 h-4" src="/img/socials/facebook.svg" alt="facebook" />
               </Link>
             </li>
             <li className="w-8 h-8 rounded-full bg-[#1DA1F2] _content-center">
               <Link href="/">
-                <img src="/img/socials/twitter.svg" alt="twitter" />
+                <Image width={0} height={0} className="w-4 h-4" src="/img/socials/twitter.svg" alt="twitter" />
               </Link>
             </li>
             <li className="w-8 h-8 rounded-full bg-[#2867B2] _content-center">
               <Link href="/">
-                <img src="/img/socials/linkedin.svg" alt="linkedin" />
+                <Image width={0} height={0} className="w-4 h-4" src="/img/socials/linkedin.svg" alt="linkedin" />
               </Link>
             </li>
             <li className="w-8 h-8 rounded-full bg-[#EA4C89] _content-center">
               <Link href="/">
-                <img src="/img/socials/dribbble.svg" alt="dribbble" />
+                <Image width={0} height={0} className="w-4 h-4" src="/img/socials/dribbble.svg" alt="dribbble" />
               </Link>
             </li>
           </ul>

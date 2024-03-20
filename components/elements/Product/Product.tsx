@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 interface IProduct {
     imagePath:string,
     desc:string,
@@ -10,7 +12,7 @@ interface IProduct {
 const Product = ({imagePath, desc, name, price, colorsNames, bgColor}:IProduct) => {
   return (
     <div className={`h-[374px] desktop:h-[418px] p-6 grid grid-rows-[200px_32px_32px_auto_auto] items-center rounded-md relative text-text--text bg-${bgColor}`}>
-        <img className='justify-self-center' src={imagePath} alt={desc} />
+        <Image className='justify-self-center' src={imagePath} alt={desc} width={200} height={200} />
         <span className="text-xs font-medium">Colors</span>
         <ul className="flex gap-2">
             {colorsNames.map((cName)=> 
@@ -25,7 +27,7 @@ const Product = ({imagePath, desc, name, price, colorsNames, bgColor}:IProduct) 
         <b>{price} $</b>
 
         <label className="w-8 h-8 rounded-full flex justify-center items-center bg-white absolute top-4 right-4 cursor-pointer has-[:checked]:bg-system-error has-[:checked]:contrast-150 transition-colors">
-            <img className="" src="/img/products/Favorite.svg" alt="like" />
+            <Image src="/img/products/Favorite.svg" alt="like" width={14} height={14} />
             <input className="hidden" type="checkbox" />
         </label>
 

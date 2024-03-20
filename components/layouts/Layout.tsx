@@ -6,7 +6,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     <>
       <Header />
       {children}
-      <span className="h-12 _content-center text-[#040404] bg-base--gray-background">Commerce, is powered by 100% renewable electricity.</span>
+      <span className="h-12 _content-center text-[#040404] text-center bg-base--gray-background">Commerce, is powered by 100% renewable electricity.</span>
       <Footer/>
     </>
   );

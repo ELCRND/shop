@@ -65,7 +65,7 @@ const SubCategories = () => {
   }, []);
   return (
     <div className="mt-10">
-      <h2 className="text-lg font-medium text-text--text">Find things you'll love. Support independent sellers.</h2>
+      <h2 className="text-lg font-medium text-text--text">Find things you&apos;ll love. Support independent sellers.</h2>
       <span className="text-sm font-medium text-subtext">Only on polka.</span>
       <swiper-container ref={swiperRef} init={false}>
         <swiper-slide>
