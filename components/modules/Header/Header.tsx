@@ -2,7 +2,7 @@
 import HeaderNav from "@/components/elements/HeaderNav/HeaderNav";
 import HumbBtn from "@/components/elements/HumbBtn/HumbBtn";
 import Logo from "@/components/elements/Logo/Logo";
-import Modal from "@/components/elements/Modal/Modal";
+import Modal from "@/context/Modal/Modal";
 import ModalNav from "@/components/elements/ModalNav/ModalNav";
 import Search from "@/components/elements/Search/Search";
 import SwapLangAndTheme from "@/components/elements/SwapLangAndTheme/SwapLangAndTheme";
@@ -10,6 +10,7 @@ import SwapLangAndTheme from "@/components/elements/SwapLangAndTheme/SwapLangAnd
 import { useLang } from "@/hooks/useLang";
 import Link from "next/link";
 import React, { useState } from "react";
+import { usePathname } from 'next/navigation'
 
 const Header = () => {
   const { lang, translations } = useLang();

@@ -18,12 +18,12 @@ const Product = ({imagePath, desc, name, price, colorsNames, bgColor}:IProduct) 
             {colorsNames.map((cName)=> 
             <li key={cName}>
                 <label className={`w-4 h-4 block rounded-full bg-${cName} cursor-pointer has-[:checked]:outline outline-1`}>
-                    <input className="hidden" type="radio" id={cName} name={name} />
+                    <input className="hidden" type="radio" data-colors={cName} name={name} />
                 </label>      
             </li>)}
         </ul>
 
-        <h3 className="mb-10 text-[14px] leading-6">{name}</h3>
+        <h3 className="mb-10 text-[14px] leading-6">{desc}</h3>
         <b>{price} $</b>
 
         <label className="w-8 h-8 rounded-full flex justify-center items-center bg-white absolute top-4 right-4 cursor-pointer has-[:checked]:bg-system-error has-[:checked]:contrast-150 transition-colors">

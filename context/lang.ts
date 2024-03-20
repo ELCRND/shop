@@ -1,5 +1,5 @@
 "use client";
-import { Langs } from "@/constants/lang";
+import { Langs } from "@/constants/langs";
 import { createDomain } from "effector";
 
 const lang = createDomain();

@@ -1,5 +1,5 @@
 'use client'
-import { Langs } from "@/constants/lang";
+import { Langs } from "@/constants/langs";
 import { setLang } from "@/context/lang";
 import { useLang } from "@/hooks/useLang";
 

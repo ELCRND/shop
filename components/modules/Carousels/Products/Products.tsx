@@ -68,8 +68,8 @@ const Products = () => {
             <swiper-slide>
                 <Product 
                     imagePath="/img/products/chair.png" 
-                    desc="chair" 
-                    name={translations[lang].products.chair.name}
+                    name="chair" 
+                    desc={translations[lang].products.chair.desc}
                     price={195.13}
                     colorsNames={[
                         'Sushi',
@@ -87,8 +87,8 @@ const Products = () => {
             <swiper-slide>
                 <Product 
                     imagePath="/img/products/lamp.png" 
-                    desc="lamp" 
-                    name={translations[lang].products.lamp.name}
+                    name="lamp" 
+                    desc={translations[lang].products.lamp.desc}
                     price={458.43}
                     colorsNames={[
                         'Sushi',
@@ -104,8 +104,8 @@ const Products = () => {
             <swiper-slide>
                 <Product 
                     imagePath="/img/products/sofa.png" 
-                    desc="sofa" 
-                    name={translations[lang].products.sofa.name}
+                    name="sofa" 
+                    desc={translations[lang].products.sofa.desc}
                     price={789.67}
                     colorsNames={[
                         'Blue',
@@ -119,8 +119,8 @@ const Products = () => {
             <swiper-slide>
                 <Product 
                     imagePath="/img/products/covers.png" 
-                    desc="covers" 
-                    name={translations[lang].products.covers.name}
+                    name="covers" 
+                    desc={translations[lang].products.covers.desc}
                     price={43.23}
                     colorsNames={[
                         'Sushi',
@@ -136,8 +136,8 @@ const Products = () => {
             <swiper-slide>
                 <Product 
                     imagePath="/img/products/covers.png" 
-                    desc="covers" 
-                    name={translations[lang].products.covers.name}
+                    name="covers2" 
+                    desc={translations[lang].products.covers.desc}
                     price={43.23}
                     colorsNames={[
                         'Sushi',

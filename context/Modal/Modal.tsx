@@ -1,8 +1,10 @@
 import { useEffect, useState, useCallback, useRef } from "react";
 import type { MouseEventHandler } from "react";
-import Portal, { createContainer } from "../Portal/Portal";
+import Portal, { createContainer } from "@/components/elements/Portal/Portal";
 
-type Props = { onClose?: () => void; children: React.ReactNode };
+type Props = { 
+  onClose?: () => void;
+   children: React.ReactNode };
 
 const MODAL_CONTAINER_ID = "modal-container-id";
 

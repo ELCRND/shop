@@ -72,6 +72,11 @@
   ._overflow-hidden{
     overflow: hidden;
   }
+  ._settings{
+    width: 48px;
+    height: 48px;
+    background-image: url('../../public/img/settings_icon.svg');
+  }
   @keyframes show-modal {
     0%{
       opacity:0.1;
@@ -120,13 +125,7 @@
   --color-text---paragraph: #292929;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+
 html{
   scroll-behavior: smooth;
 }
@@ -146,7 +145,7 @@ html::-webkit-scrollbar-thumb:hover{
 body {
   min-width: 320px;
   font-family: "Poppins", sans-serif;
-  color: rgb(var(--foreground-rgb));
+  color: var(--main---white);
 }
 input {
   outline: none;

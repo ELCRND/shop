@@ -56,16 +56,16 @@
         "products":{
             "colors":"colors",
             "chair":{
-                "name":"Vonna Neva Walnut Sandalye Chair"
+                "desc":"Vonna Neva Walnut Sandalye Chair"
             },
             "lamp":{
-                "name":"Wood lamp, Floor Lamp, Lambader, Decorative"
+                "desc":"Wood lamp, Floor Lamp, Lambader, Decorative"
             },
             "sofa":{
-                "name":"NOCKEBY 3-Seat Sofa Cover Slipcover Hand Made With Multiple"
+                "desc":"NOCKEBY 3-Seat Sofa Cover Slipcover Hand Made With Multiple"
             },
             "covers":{
-                "name":"Lace Punch Needle Pillow Covers with invisible zipper, 16*16 inches"
+                "desc":"Lace Punch Needle Pillow Covers with invisible zipper, 16*16 inches"
             }
         },
         "banners":{
@@ -151,16 +151,16 @@
         "products":{
             "colors":"Цвета",
             "chair":{
-                "name":"Стул Vonna Neva Орех Sandalye"
+                "desc":"Стул Vonna Neva Орех Sandalye"
             },
             "lamp":{
-                "name":"Деревянная лампа, Торшер, Lambader, Декоративная"
+                "desc":"Деревянная лампа, Торшер, Lambader, Декоративная"
             },
             "sofa":{
-                "name":"Чехол на трехместный диван NOCKEBY, чехол ручной работы из нескольких материалов"
+                "desc":"Чехол на трехместный диван NOCKEBY, чехол ручной работы из нескольких материалов"
             },
             "covers":{
-                "name":"Чехлы на подушки с кружевной иглой и потайной молнией, 16*16 дюймов"
+                "desc":"Чехлы на подушки с кружевной иглой и потайной молнией, 16*16 дюймов"
             }
         },
         "banners":{
