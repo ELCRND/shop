@@ -1,13 +1,7 @@
 "use client";
+import SwapLangAndTheme from "@/components/elements/SwapLangAndTheme/SwapLangAndTheme";
 import { AnimatePresence, motion, useCycle } from "framer-motion";
 import { MouseEventHandler, useCallback, useEffect, useRef } from "react";
-
-const links = [
-  { name: "Home", to: "#", id: "_1" },
-  { name: "About", to: "#", id: "_2" },
-  { name: "Blog", to: "#", id: "_3" },
-  { name: "Contact", to: "#", id: "_4" },
-];
 
 const sideVariants = {
   closed: {
@@ -31,15 +25,14 @@ const itemVariants = {
 };
 const settingsVariants = {
   closed: {
-    rotate:0,
-    transition:{delay:0,duration:1}
+    rotate: 0,
+    transition: { delay: 0, duration: 1 },
   },
-  open: { 
-    rotate:360,
-    transition:{delay:0,duration:1} 
-},
-}
-
+  open: {
+    rotate: 360,
+    transition: { delay: 0, duration: 1 },
+  },
+};
 
 const Sidebar = () => {
   const [open, cycleOpen] = useCycle(false, true);
@@ -68,23 +61,31 @@ const Sidebar = () => {
               variants={sideVariants}
               className="flex flex-col relative"
             >
-              {links.map(({ name, to, id }) => (
-                <motion.a key={id} href={to} variants={itemVariants}>
-                  {name}
-                </motion.a>
-              ))}
-              <motion.div className="absolute right-0" variants={settingsVariants} >
-                <button className="_settings _content-center" onClick={handleCycle}></button>
+              <motion.div
+                initial="closed"
+                animate="open"
+                exit="closed"
+                variants={itemVariants}
+              >
+                <SwapLangAndTheme />
+              </motion.div>
+              <motion.div
+                className="absolute right-0"
+                variants={settingsVariants}
+              >
+                <button
+                  className="_settings _content-center"
+                  onClick={handleCycle}
+                ></button>
               </motion.div>
             </motion.div>
           </motion.aside>
         )}
       </AnimatePresence>
-      
+
       <div className="absolute top-0 text-text--text">
         <button className="_settings" onClick={handleCycle}></button>
       </div>
-      
     </>
   );
 };

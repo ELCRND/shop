@@ -5,7 +5,6 @@ import Logo from "@/components/elements/Logo/Logo";
 import Modal from "@/context/Modal/Modal";
 import ModalNav from "@/components/elements/ModalNav/ModalNav";
 import Search from "@/components/elements/Search/Search";
-import SwapLangAndTheme from "@/components/elements/SwapLangAndTheme/SwapLangAndTheme";
 
 import { useLang } from "@/hooks/useLang";
 import Link from "next/link";
@@ -33,10 +32,9 @@ const Header = () => {
 
           {isModalActive && (
           <Modal onClose={handleModalClose}>
-            <SwapLangAndTheme/>
             <ModalNav/>
           </Modal>
-          )}
+           )}
 
           <button className="col-start-3 justify-self-end py-4 px-[30px] hidden tablet:block rounded-[50px] bg-main-primary text-[12px] leading-4 font-medium">
             {translations[lang].header["help-btn"]}

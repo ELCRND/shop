@@ -35,26 +35,26 @@ const Categories = () => {
   }, []);
   return (
     <div className="mt-6">
-      <swiper-container  ref={swiperRef} init={false}>
-        <swiper-slide>
+      <swiper-container ref={swiperRef} init={false}>
+        <swiper-slide style={{backgroundColor:'rgb(226, 232, 240)', borderRadius:"20px"}}>
           <Category imagePath="/img/categoryCarousel/clothing&shoes.jpeg" desc="clothing&shoes"/>
         </swiper-slide>
-        <swiper-slide>
+        <swiper-slide style={{backgroundColor:'rgb(226, 232, 240)', borderRadius:"20px"}}>
           <Category imagePath="/img/categoryCarousel/home&living.jpeg" desc="home&living"/>
         </swiper-slide>
-        <swiper-slide>
+        <swiper-slide style={{backgroundColor:'rgb(226, 232, 240)', borderRadius:"20px"}}>
           <Category imagePath="/img/categoryCarousel/art&collectibles.jpeg" desc="art&collectibles"/>
         </swiper-slide>
-        <swiper-slide>
+        <swiper-slide style={{backgroundColor:'rgb(226, 232, 240)', borderRadius:"20px"}}>
           <Category imagePath="/img/categoryCarousel/jewelry&accessories.jpeg" desc="jewelry&accessories"/>
         </swiper-slide>
-        <swiper-slide>
+        <swiper-slide style={{backgroundColor:'rgb(226, 232, 240)', borderRadius:"20px"}}>
           <Category imagePath="/img/categoryCarousel/wedding&party.jpeg" desc="wedding&party"/>
         </swiper-slide>
-        <swiper-slide>
+        <swiper-slide style={{backgroundColor:'rgb(226, 232, 240)', borderRadius:"20px"}}>
           <Category imagePath="/img/categoryCarousel/toys&entertainment.jpeg" desc="toys&entertainment"/>
         </swiper-slide>
-        <swiper-slide>
+        <swiper-slide style={{backgroundColor:'rgb(226, 232, 240)', borderRadius:"20px"}}>
           <Category imagePath="/img/categoryCarousel/craftSupplies&tools.jpeg" desc="craftSupplies&tools"/>
         </swiper-slide>
       </swiper-container>

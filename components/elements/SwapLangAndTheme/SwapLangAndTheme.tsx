@@ -1,15 +1,16 @@
 'use client'
 import { Langs } from "@/constants/langs";
 import { setLang } from "@/context/lang";
-import { useLang } from "@/hooks/useLang";
 
 const SwapLangAndTheme = () => {
-    const {lang} =useLang()
   return (
-    <div className="group absolute top-1 left-1 py-1 px-3 rounded-md bg-main-third">
-        <button className="hidden group-hover:block" title="swap language" onClick={()=>lang === "ru" ? setLang(Langs.EN) : setLang(Langs.RU)}>
-            {lang === "ru" ? 'Русский' : 'English'}
-        </button>
+    <div className="p-3 flex gap-2">
+      <label className="w-8 h-8 block rounded-full bg-[url('/img/EN_flag.svg')] bg-center bg-cover cursor-pointer hover:scale-110">
+        <input className="hidden" type="radio" name="lang" onChange={()=>setLang(Langs.EN)} />
+      </label>
+      <label className="w-8 h-8 block rounded-full bg-[url('/img/RU_flag.svg')] bg-center bg-cover cursor-pointer hover:scale-110">
+        <input className="hidden" type="radio" name="lang" onChange={()=>setLang(Langs.RU)}/>
+      </label>
     </div>
   )
 }

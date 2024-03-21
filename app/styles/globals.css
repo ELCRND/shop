@@ -8,6 +8,7 @@
   .container{
     min-width: 320px;
   }
+
   ._accordion{
     margin-bottom: 24px;
     padding: 16px 24px;
@@ -19,15 +20,18 @@
     font-weight: 500;
     position: relative;
   }
+
   ._accordion::after{
     content: '\276E';
     position: absolute;
     right: 30px;
     rotate: 90deg;
   }
+
    [type="checkbox"]:checked + ._accordion::after{
    rotate: 270deg;
   }
+
   ._accordion-list{
     margin: 0 32px 16px 32px;
     display: none;
@@ -37,29 +41,34 @@
     line-height: 18px;
     transition: all 1s ease-in-out;
   }
+
   ._content-center{
     display: flex;
     justify-content: center;
     align-items: center;
   }
+
   ._hover:hover{
     color: var(--main---primary);
     cursor: pointer;
     transition: color 200ms ease-in-out;
   }
+
   ._active:active{
     color: var(--main-third);
     cursor: pointer; 
     transition: color 100ms ease-in-out;
   }
+
   ._modal-wrapper{
     position: absolute;
     top:0;
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,.5);
-    z-index: 100;
+    z-index: 1000;
   }
+
   ._modal{
     height: 30vh;
     opacity:1;
@@ -67,15 +76,30 @@
     background-color:#227c5a ;
     border-radius: 0 0 30px 30px;
     position: relative;
-    animation: show-modal 0.8s ease-in-out forwards;
+    z-index: 1000;
+    /* animation: show-modal 0.8s ease-in-out forwards; */
   }
+
+  ._opacity-0{
+    opacity: 0;
+  }
+
   ._overflow-hidden{
     overflow: hidden;
   }
+
   ._settings{
-    width: 48px;
-    height: 48px;
+    width: 32px;
+    height: 32px;
     background-image: url('../../public/img/settings_icon.svg');
+    background-size: contain;
+  }
+  
+  @media screen and (min-width:900px) {
+    ._settings{
+      width: 48px;
+    height: 48px;
+    }
   }
   @keyframes show-modal {
     0%{
