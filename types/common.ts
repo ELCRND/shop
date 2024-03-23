@@ -23,3 +23,10 @@ export interface ISizes {
   xl: boolean;
   xxl: boolean;
 }
+
+export type ActionBtn = {
+  text: string;
+  withTooltip: boolean;
+  actionClass: string;
+  callback?: VoidFunction;
+};
