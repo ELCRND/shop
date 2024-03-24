@@ -28,8 +28,8 @@ const Bestsellers = () => {
           "h-[1896px] sm:h-[810px] tablet:h-[936px] desktop:h-[456px] bg-slate-100"
         } mt-6 transition-colors duration-[2500ms] grid grid-cols-1 sm:grid-cols-2 desktop:grid-cols-4 gap-6 rounded-md`}
       >
-        {goods.map((product: IProduct) => (
-          <BestsellerProduct item={product} />
+        {goods.map((product: IProduct, i) => (
+          <BestsellerProduct key={product._id} item={product} />
         ))}
       </ul>
       {showModal && (

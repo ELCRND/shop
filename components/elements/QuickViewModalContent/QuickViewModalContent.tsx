@@ -50,9 +50,9 @@ const QuickViewModalContent = () => {
               <li key={s[0]} className="inline-block ml-2 ">
                 <span className="uppercase">{s[0]} : </span>
                 {s[1] ? (
-                  <span className="text-system--succes">"В наличии"</span>
+                  <span className="text-system--succes">В наличии</span>
                 ) : (
-                  <span className="text-system-error">"Отсутсвует"</span>
+                  <span className="text-system-error">Отсутсвует</span>
                 )}
               </li>
             ))}
