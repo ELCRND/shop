@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Category = ({ imagePath, desc }: { imagePath: string; desc: string }) => {
-  const { handleLoadingImageComplete, imgSpinner } = useImagePreloader();
+  const { handleLoadingImageComplete } = useImagePreloader();
   return (
     <li className="rounded-lg overflow-hidden relative _hover _active">
       <Link href={desc}>
@@ -15,7 +15,9 @@ const Category = ({ imagePath, desc }: { imagePath: string; desc: string }) => {
           width={424}
           height={180}
         />
-        <span className="absolute bottom-4 left-4 text-inherit">{desc}</span>
+        <span className="px-2 rounded-md absolute bottom-4 left-4 text-inherit">
+          {desc}
+        </span>
       </Link>
     </li>
   );

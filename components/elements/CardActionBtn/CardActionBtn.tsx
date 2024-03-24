@@ -21,7 +21,7 @@ const CardActionBtn = ({
     }
   }, [open, withTooltip]);
   return (
-    <div className="relative">
+    <div className="relative even:hidden tablet:even:block">
       <button
         className={`w-8 h-8 block relative z-10 ${actionClass}`}
         onClick={callback}

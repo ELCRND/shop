@@ -1,9 +1,10 @@
-import { useEffect, useState } from 'react';
-import { createPortal } from 'react-dom';
+import { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 
-type PortalProps = { id: string; children: React.ReactNode; };
+type PortalProps = { id: string; children: React.ReactNode };
 
-const PORTAL_ERROR_MSG ='There is no portal container in markup. Please add portal container with proper id attribute.';
+const PORTAL_ERROR_MSG =
+  "There is no portal container in markup. Please add portal container with proper id attribute.";
 
 const Portal = (props: PortalProps) => {
   const { id, children } = props;
@@ -26,16 +27,16 @@ const Portal = (props: PortalProps) => {
 
 type containerOptions = { id: string; mountNode?: HTMLElement };
 
-const createContainer = (options : containerOptions) => {
+const createContainer = (options: containerOptions) => {
   if (document.getElementById(options.id)) {
     return;
   }
 
   const { id, mountNode = document.body } = options;
-  
-  const portalContainer = document.createElement('div');
 
-  portalContainer.setAttribute('id', id);
+  const portalContainer = document.createElement("div");
+
+  portalContainer.setAttribute("id", id);
   mountNode.appendChild(portalContainer);
 };
 
