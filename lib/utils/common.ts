@@ -13,3 +13,7 @@ export const shuffle = <T>(array: T[]) => {
 
   return array;
 };
+
+export const getRandomValue = (value: number) => {
+  return Math.floor(Math.random() * value);
+};

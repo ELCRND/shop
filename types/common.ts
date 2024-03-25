@@ -1,3 +1,5 @@
+import { FieldErrorsImpl, UseFormRegister } from "react-hook-form";
+
 export interface IProduct {
   _id: string;
   type: string;
@@ -30,3 +32,25 @@ export type ActionBtn = {
   actionClass: string;
   callback?: VoidFunction;
 };
+
+export interface IInputs {
+  name: string;
+  email: string;
+  password: string;
+}
+export interface ISignUpFx {
+  name?: string;
+  isOAuth?: boolean;
+  email: string;
+  password: string;
+}
+
+export interface IAuthSideProps {
+  toggleAuth: VoidFunction;
+  isSideActive: boolean;
+}
+
+export interface IAuthInput {
+  register: UseFormRegister<IInputs>;
+  errors: Partial<FieldErrorsImpl<IInputs>>;
+}

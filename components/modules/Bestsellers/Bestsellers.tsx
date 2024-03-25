@@ -3,7 +3,6 @@ import { $bestsellerProducts } from "@/context/goods";
 import useImagePreloader from "@/hooks/useImagePreloader";
 import { IProduct } from "@/types/common";
 import BestsellerProduct from "@/components/elements/BestsellerProduct/BestsellerProduct";
-import { useCardActions } from "@/hooks/useCardActions";
 import {
   $showQuickViewModal,
   bodyOverflowRemove,
@@ -14,7 +13,8 @@ import QuickViewModalContent from "@/components/elements/QuickViewModalContent/Q
 
 const Bestsellers = () => {
   const goods = useUnit($bestsellerProducts);
-  const { imgSpinner } = useImagePreloader();
+  console.log(goods);
+  const { imgSpinner, handleLoadingImageComplete } = useImagePreloader();
   const showModal = useUnit($showQuickViewModal);
   const handleCloseQuickViewModal = () => {
     bodyOverflowRemove();
@@ -28,8 +28,12 @@ const Bestsellers = () => {
           "h-[1896px] sm:h-[810px] tablet:h-[936px] desktop:h-[456px] bg-slate-100"
         } mt-6 transition-colors duration-[2500ms] grid grid-cols-1 sm:grid-cols-2 desktop:grid-cols-4 gap-6 rounded-md`}
       >
-        {goods.map((product: IProduct, i) => (
-          <BestsellerProduct key={product._id} item={product} />
+        {goods.map((product: IProduct) => (
+          <BestsellerProduct
+            key={product._id}
+            item={product}
+            isLoading={handleLoadingImageComplete}
+          />
         ))}
       </ul>
       {showModal && (

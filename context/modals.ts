@@ -9,16 +9,14 @@ export const bodyOverflowRemove = () =>
 
 export const closeMenuModal = modals.createEvent();
 export const showMenuModal = modals.createEvent();
-
-export const closeQuickViewModal = modals.createEvent();
-export const showQuickViewModal = modals.createEvent();
-
 export const $menuModal = modals
-  .createStore(false)
+  .createStore<boolean>(false)
   .on(showMenuModal, () => true)
   .on(closeMenuModal, () => false);
 
+export const closeQuickViewModal = modals.createEvent();
+export const showQuickViewModal = modals.createEvent();
 export const $showQuickViewModal = modals
-  .createStore(false)
+  .createStore<boolean>(false)
   .on(showQuickViewModal, () => true)
   .on(closeQuickViewModal, () => false);

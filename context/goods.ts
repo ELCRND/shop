@@ -1,7 +1,7 @@
 "use client";
 import { Effect, createDomain, sample } from "effector";
 import { Gate, createGate } from "effector-react";
-import { getBestsellerProductsFx, getNewProductsFx } from "@/api/main-page";
+import { getBestsellerProductsFx } from "@/api/main-page";
 import { IProduct } from "@/types/common";
 import { loadOneProductFx } from "@/api/goods";
 import { ILoadOneProductFx } from "@/types/goods";
@@ -29,10 +29,10 @@ const goodsSampleInstance = (
     target: effect,
   });
 
-export const $newProducts = goodsStoreInstance(getNewProductsFx);
+// export const $newProducts = goodsStoreInstance(getNewProductsFx);
 export const $bestsellerProducts = goodsStoreInstance(getBestsellerProductsFx);
 
-goodsSampleInstance(getNewProductsFx, MainPageGate);
+// goodsSampleInstance(getNewProductsFx, MainPageGate);
 goodsSampleInstance(getBestsellerProductsFx, MainPageGate);
 
 export const $currentProduct = goods
